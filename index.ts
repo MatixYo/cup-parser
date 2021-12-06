@@ -3,8 +3,8 @@ import {dsvFormat} from 'd3-dsv';
 namespace CUPParser {
   const csv = dsvFormat(',');
 
-  const RE_LAT = /(\d{2})(\d{2}\.\d{3})([NS])/;
-  const RE_LON = /(\d{3})(\d{2}\.\d{3})([EW])/;
+  const RE_LAT = /(\d{2})(\d{1,2}\.\d{1,4})([NS])/;
+  const RE_LON = /(\d{3})(\d{1,2}\.\d{1,3})([EW])/;
   const RE_VDIS = /^\s*(\d+(?:\.\d+)?)(m|ft)\s*$/i;
   const RE_HDIS = /^\s*(\d+(?:\.\d+)?)(km|ml|nm|m|ft)\s*$/i;
   const RE_DURATION = /(?:(?:(\d+):)?(\d+):)?(\d{2})/;
